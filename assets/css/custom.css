@@ -1,0 +1,25 @@
+.custom-colour {
+  background-color: #2f344b;
+  color: #fff;
+}
+
+.icon-custom {
+  color: #1efa72;
+}
+.icon-custom:hover {
+  color: #009839;
+}
+
+.custom-btn {
+  background-color: #1efa72;
+  color: #2f344b;
+}
+
+.custom-btn:hover {
+  background-color: #009839;
+  color: #fff;
+}
+
+.custom-link {
+  color: #1efa72;
+}
