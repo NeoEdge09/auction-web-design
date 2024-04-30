@@ -27,12 +27,18 @@
     />
     <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
+
     <!--end::Global Stylesheets Bundle-->
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
   </head>
   <!--end::Head-->
   <!--begin::Body-->
@@ -41,14 +47,14 @@
       <!--Start::navbar-->
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Logo</a>
+          <a class="navbar-brand" href="#"> Logo </a>
           <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
             aria-controls="navbarNav"
-            aria-expanded="false"
+            aria-expanded="true"
             aria-label="Toggle navigation"
           >
             <span class="navbar-toggler-icon"></span>
@@ -73,67 +79,207 @@
       </nav>
       <!--End::navbar-->
       <!--Start::content-->
-
-      <div class="container text-center">
+      <div class="container mt-5">
         <div class="row">
-          <div class="col">
-            <div class="card" style="width: 456px">
+          <div class="col-md-8 d-flex gap-4">
+            <div
+              style="width: 500px; height: 371px; object-fit: cover"
+              class="card-img-top position-relative d-none d-sm-block"
+            >
               <img
                 src="/assets/media/image/image1.jpeg"
-                class="card-img rounded img-fluid"
-                alt="image1"
+                alt="House image"
+                class="img-fluid rounded"
+                style="width: 500px; height: 371px; object-fit: cover"
               />
+              <div
+                class="d-flex gap-5 button-container"
+                style="position: absolute; bottom: 10px; left: 10px"
+              >
+                <button class="btn btn-light fw-bold" style="color: #007d05">
+                  <i class="las la-image fs-1" style="color: #007d05"></i
+                  >Gallery
+                </button>
+                <button class="btn btn-light fw-bold" style="color: #007d05">
+                  <i class="fa-regular fa-map fs-2" style="color: #007d05"></i
+                  >Map
+                </button>
+              </div>
             </div>
-          </div>
-          <div class="col">
-            <div class="vertical-images">
-              <div class="card">
+            <div class="vertical-images gap-4">
+              <div
+                class="img-fluid d-none d-sm-block"
+                style="width: 350px; height: 181px; object-fit: cover"
+              >
                 <img
-                  id="img2"
                   src="/assets/media/image/image2.jpeg"
-                  alt="Image 2"
-                  class="card-img rounded img-fluid"
-                  style="height: 200px; width: 182.5px; object-fit: cover"
+                  alt="Up image"
+                  class="img-fluid rounded"
+                  style="width: 350px; height: 181px; object-fit: cover"
                 />
               </div>
-              <div class="card">
+              <div
+                class="img-fluid d-none d-sm-block"
+                style="width: 350px; height: 181px; object-fit: cover"
+              >
                 <img
-                  id="img3"
                   src="/assets/media/image/image3.jpeg"
-                  alt="Image 3"
-                  class="card-img rounded img-fluid"
-                  style="height: 200px; width: 182.5px; object-fit: cover"
+                  alt="Down image"
+                  class="img-fluid rounded"
+                  style="width: 350px; height: 181px; object-fit: cover"
                 />
               </div>
             </div>
+            <div
+              id="carouselExample"
+              class="carousel slide my-3 d-block d-sm-none"
+            >
+              <div
+                class="carousel-inner"
+                style="width: 370px; height: 250px; object-fit: cover"
+              >
+                <div class="carousel-item active">
+                  <img
+                    src="/assets/media/image/image1.jpeg"
+                    class="d-block w-100 rounded"
+                    alt="image1"
+                    style="width: 370px; height: 250px; object-fit: cover"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/assets/media/image/image2.jpeg"
+                    class="d-block w-100 rounded"
+                    alt="image2"
+                    style="width: 370px; height: 250px; object-fit: cover"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/assets/media/image/image3.jpeg"
+                    class="d-block w-100 rounded"
+                    alt="image3"
+                    style="width: 370px; height: 195px; object-fit: cover"
+                  />
+                </div>
+                <i
+                  class="fa-regular fa-heart fs-1 text-white position-absolute top-0 end-0 m-2"
+                ></i>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
           </div>
-          <div class="col">
-            <div class="card custom-colour mx-4 py-4">
+          <div class="d-flex gap-5 d-block d-sm-none">
+            <button class="btn btn-light fw-bold" style="color: #007d05">
+              <i class="las la-image fs-1" style="color: #007d05"></i>Gallery
+            </button>
+            <button class="btn btn-light fw-bold" style="color: #007d05">
+              <i class="fa-regular fa-map fs-2" style="color: #007d05"></i>Map
+            </button>
+          </div>
+          <div class="my-5 d-block d-sm-none">
+            <h1 class="">12 kilbrack lawn</h1>
+            <div class="fs-3 fw-bold mb-3">
+              <i
+                class="ki-outline ki-geolocation me-2 text-dark fs-3 fw-bolder"
+              ></i
+              >Cork Cork T12XPN, Ireland
+            </div>
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="card custom-colour py-4">
               <h1 class="text-white">Auction ends in</h1>
               <div class="text-white d-flex justify-content-center gap-4">
                 <div>
-                  <span id="days" class="fw-bold fs-1">00</span>
-                  <div class="fs-4 fw-semibold text-gray-500">DAYS</div>
+                  <span
+                    id="days"
+                    class="fw-bold fs-1"
+                    style="font-size: clamp(1rem, 2vw, 2rem)"
+                  >
+                    00
+                  </span>
+                  <div
+                    class="fs-4 fw-semibold text-gray-500"
+                    style="font-size: clamp(1rem, 2vw, 2rem)"
+                  >
+                    DAYS
+                  </div>
                 </div>
                 <span class="fw-bold fs-1 mt-3">:</span>
                 <div>
-                  <span id="hours" class="fw-bold fs-1">00</span>
-                  <div class="fs-4 fw-semibold text-gray-500">HOURS</div>
+                  <span
+                    id="hours"
+                    class="fw-bold fs-1"
+                    style="font-size: clamp(1rem, 2vw, 2rem)"
+                  >
+                    00
+                  </span>
+                  <div
+                    class="fs-4 fw-semibold text-gray-500"
+                    style="font-size: clamp(1rem, 2vw, 2rem)"
+                  >
+                    HOURS
+                  </div>
                 </div>
                 <span class="fw-bold fs-1 mt-3">:</span>
 
                 <div>
-                  <span id="minutes" class="fw-bold fs-1">00</span>
-                  <div class="fs-4 fw-semibold text-gray-500">MIN</div>
+                  <span
+                    id="minutes"
+                    class="fw-bold fs-1"
+                    style="font-size: clamp(1rem, 2vw, 2rem)"
+                  >
+                    00
+                  </span>
+                  <div
+                    class="fs-4 fw-semibold text-gray-500"
+                    style="font-size: clamp(1rem, 2vw, 2rem)"
+                  >
+                    MIN
+                  </div>
                 </div>
                 <span class="fw-bold fs-1 mt-3">:</span>
                 <div>
-                  <span id="seconds" class="fw-bold fs-1">00</span>
-                  <div class="fs-4 fw-semibold text-gray-500">SEC</div>
+                  <span
+                    id="seconds"
+                    class="fw-bold fs-1"
+                    style="font-size: clamp(1rem, 2vw, 2rem)"
+                  >
+                    00
+                  </span>
+                  <div
+                    class="fs-4 fw-semibold text-gray-500"
+                    style="font-size: clamp(1rem, 2vw, 2rem)"
+                  >
+                    SEC
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="card custom-colour mx-4 py-4 mt-2">
+            <div class="card custom-colour py-4 mt-2">
               <h1 class="text-white">€70,000</h1>
               <div class="fs-4 mb-3 fw-semibold text-gray-500">
                 CURRENT HIGHEST BID
@@ -141,21 +287,1107 @@
               <div class="text-white d-flex justify-content-center">
                 <div class="input-group input-group-merge mx-5">
                   <button class="input-group-text">
-                    <i class="ki-duotone ki-minus fs-1"> </i>
+                    <i class="ki-duotone ki-minus fs-1"></i>
                   </button>
                   <input type="text" class="form-control" />
                   <button class="input-group-text">
-                    <i class="ki-duotone ki-plus fs-1 icon-custom"> </i>
+                    <i class="ki-duotone ki-plus fs-1 icon-custom"></i>
                   </button>
                 </div>
               </div>
               <button class="btn custom-btn mx-5 mt-4">
                 <span class="fw-bold fs-3">Place Bid</span>
               </button>
-              <a class="btn custom-link fw-semibold fs-4"
-                ><i class="las la-history fs-1 text-success"></i>Bids History
-                (2)</a
+              <a class="btn custom-link fw-semibold fs-4">
+                <i class="las la-history fs-1 text-success"></i>
+                Bids History (2)
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-8 mt-5">
+            <div class="d-none d-sm-block">
+              <h1 class="">12 kilbrack lawn</h1>
+            </div>
+            <div class="fs-3 fw-bold mb-3 d-none d-sm-block">
+              <i
+                class="ki-outline ki-geolocation me-2 text-dark fs-3 fw-bolder"
+              ></i
+              >Cork Cork T12XPN, Ireland
+            </div>
+            <div class="d-flex gap-8 text-center">
+              <div class="d-none d-sm-block">
+                <div class="fs-6 fw-semibold text-gray-600">BEDS</div>
+                <h5 class="fs-5 fw-semibold text-dark">
+                  <svg
+                    width="22"
+                    height="15"
+                    viewBox="0 0 44 30"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <path
+                      d="M12,15C13.187,15 14.347,14.648 15.333,13.989C16.32,13.33 17.089,12.393 17.543,11.296C17.997,10.2 18.116,8.994 17.885,7.83C17.653,6.666 17.082,5.597 16.243,4.758C15.404,3.918 14.334,3.347 13.171,3.116C12.007,2.884 10.8,3.003 9.704,3.457C8.608,3.911 7.67,4.68 7.011,5.667C6.352,6.654 6,7.814 6,9C6,10.592 6.632,12.118 7.757,13.243C8.883,14.368 10.409,15 12,15L12,15ZM12,7C12.396,7 12.782,7.118 13.111,7.337C13.44,7.557 13.696,7.869 13.848,8.235C13.999,8.6 14.039,9.002 13.962,9.39C13.884,9.778 13.694,10.135 13.414,10.414C13.135,10.694 12.778,10.885 12.39,10.962C12.002,11.039 11.6,10.999 11.235,10.848C10.869,10.697 10.557,10.44 10.337,10.111C10.117,9.782 10,9.396 10,9C10,8.47 10.211,7.961 10.586,7.586C10.961,7.211 11.47,7 12,7ZM38,3L22,3C21.47,3 20.961,3.211 20.586,3.586C20.211,3.961 20,4.47 20,5L20,17L4,17L4,1C4,0.47 3.789,-0.039 3.414,-0.414C3.039,-0.789 2.53,-1 2,-1C1.47,-1 0.961,-0.789 0.586,-0.414C0.211,-0.039 0,0.47 0,1L0,27C0,27.531 0.211,28.039 0.586,28.414C0.961,28.789 1.47,29 2,29C2.53,29 3.039,28.789 3.414,28.414C3.789,28.039 4,27.531 4,27L4,21L40,21L40,27C40,27.531 40.211,28.039 40.586,28.414C40.961,28.789 41.47,29 42,29C42.53,29 43.039,28.789 43.414,28.414C43.789,28.039 44,27.531 44,27L44,9C44,7.409 43.368,5.883 42.243,4.758C41.117,3.632 39.591,3 38,3ZM40,17L24,17L24,7L38,7C38.53,7 39.039,7.211 39.414,7.586C39.789,7.961 40,8.47 40,9L40,17Z"
+                      fill="#2F344B"
+                    />
+                  </svg>
+
+                  3
+                </h5>
+              </div>
+
+              <div class="d-none d-sm-block">
+                <div class="fs-6 fw-semibold text-gray-600">BATHS</div>
+                <h5 class="fs-5 fw-semibold text-dark">
+                  <svg
+                    width="19"
+                    height="20"
+                    viewBox="0 0 44 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <path
+                      d="M42,20L8,20L8,8.821C7.993,8.1 8.183,7.392 8.55,6.772C8.916,6.152 9.446,5.644 10.08,5.303C10.782,4.923 11.581,4.762 12.375,4.841C11.971,6.065 11.914,7.377 12.209,8.632C12.505,9.886 13.142,11.035 14.051,11.949L16.172,14.071C16.358,14.256 16.578,14.404 16.821,14.504C17.063,14.605 17.323,14.656 17.586,14.656C17.849,14.656 18.109,14.605 18.351,14.504C18.594,14.404 18.814,14.256 19,14.071L26.07,7C26.256,6.815 26.403,6.594 26.504,6.351C26.605,6.109 26.656,5.849 26.656,5.586C26.656,5.324 26.605,5.063 26.504,4.821C26.403,4.578 26.256,4.358 26.07,4.172L23.949,2.051C22.769,0.876 21.207,0.161 19.546,0.035C17.885,-0.09 16.234,0.382 14.89,1.366C13.678,0.893 12.369,0.723 11.077,0.871C9.784,1.019 8.548,1.48 7.474,2.215C6.401,2.95 5.523,3.935 4.918,5.087C4.312,6.238 3.997,7.52 4,8.821L4,20L2,20C1.47,20 0.961,20.211 0.586,20.586C0.211,20.961 0,21.47 0,22C0,22.531 0.211,23.039 0.586,23.414C0.961,23.79 1.47,24 2,24L4,24L4,30C4.004,31.237 4.39,32.442 5.107,33.451C5.823,34.459 6.833,35.221 8,35.632L8,38C8,38.531 8.211,39.039 8.586,39.414C8.961,39.79 9.47,40 10,40C10.53,40 11.039,39.79 11.414,39.414C11.789,39.039 12,38.531 12,38L12,36L32,36L32,38C32,38.531 32.211,39.039 32.586,39.414C32.961,39.79 33.47,40 34,40C34.53,40 35.039,39.79 35.414,39.414C35.789,39.039 36,38.531 36,38L36,35.632C37.167,35.221 38.177,34.459 38.893,33.451C39.61,32.442 39.996,31.237 40,30L40,24L42,24C42.53,24 43.039,23.79 43.414,23.414C43.789,23.039 44,22.531 44,22C44,21.47 43.789,20.961 43.414,20.586C43.039,20.211 42.53,20 42,20ZM16.879,4.879C17.442,4.318 18.205,4.002 19,4.002C19.795,4.002 20.558,4.318 21.121,4.879L21.828,5.586L17.586,9.828L16.879,9.121C16.317,8.558 16.002,7.796 16.001,7C16.001,6.205 16.317,5.442 16.879,4.879L16.879,4.879ZM36,30C36,30.531 35.789,31.039 35.414,31.414C35.039,31.789 34.53,32 34,32L10,32C9.47,32 8.961,31.789 8.586,31.414C8.211,31.039 8,30.531 8,30L8,24L36,24L36,30Z"
+                      fill="#000000"
+                    />
+                  </svg>
+
+                  3
+                </h5>
+              </div>
+              <div class="d-none d-sm-block">
+                <div class="fs-6 fw-semibold text-gray-600">SIZE (SQFT)</div>
+                <h5 class="fs-5 fw-semibold text-dark">
+                  <svg
+                    width="20"
+                    height="8"
+                    viewBox="0 0 40 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <path
+                      d="M39.84,7.24C39.745,6.995 39.602,6.77 39.42,6.58L34.42,1.58C34.043,1.204 33.533,0.992 33,0.992C32.467,0.992 31.957,1.204 31.58,1.58C31.203,1.957 30.992,2.468 30.992,3C30.992,3.533 31.203,4.044 31.58,4.42L33.18,6L24,6C23.47,6 22.961,6.211 22.586,6.586C22.211,6.961 22,7.47 22,8C22,8.531 22.211,9.039 22.586,9.414C22.961,9.789 23.47,10 24,10L33.18,10L31.58,11.58C31.393,11.766 31.244,11.987 31.142,12.231C31.041,12.475 30.988,12.736 30.988,13C30.988,13.264 31.041,13.526 31.142,13.769C31.244,14.013 31.393,14.234 31.58,14.42C31.766,14.608 31.987,14.756 32.231,14.858C32.475,14.959 32.736,15.012 33,15.012C33.264,15.012 33.525,14.959 33.769,14.858C34.013,14.756 34.234,14.608 34.42,14.42L39.42,9.42C39.602,9.23 39.745,9.006 39.84,8.76C40.04,8.273 40.04,7.727 39.84,7.24ZM16,6L6.82,6L8.42,4.42C8.797,4.044 9.008,3.533 9.008,3C9.008,2.468 8.797,1.957 8.42,1.58C8.043,1.204 7.533,0.992 7,0.992C6.467,0.992 5.957,1.204 5.58,1.58L0.58,6.58C0.398,6.77 0.255,6.995 0.16,7.24C-0.04,7.727 -0.04,8.273 0.16,8.76C0.255,9.006 0.398,9.23 0.58,9.42L5.58,14.42C5.766,14.608 5.987,14.756 6.231,14.858C6.475,14.959 6.736,15.012 7,15.012C7.264,15.012 7.525,14.959 7.769,14.858C8.013,14.756 8.234,14.608 8.42,14.42C8.607,14.234 8.756,14.013 8.858,13.769C8.959,13.526 9.012,13.264 9.012,13C9.012,12.736 8.959,12.475 8.858,12.231C8.756,11.987 8.607,11.766 8.42,11.58L6.82,10L16,10C16.53,10 17.039,9.789 17.414,9.414C17.789,9.039 18,8.531 18,8C18,7.47 17.789,6.961 17.414,6.586C17.039,6.211 16.53,6 16,6Z"
+                      fill="#000000"
+                    />
+                  </svg>
+
+                  1,150
+                </h5>
+              </div>
+            </div>
+            <div
+              class="d-flex gap-8 text-center justify-content-center d-block d-sm-none"
+            >
+              <div>
+                <div class="fs-6 fw-semibold text-gray-600">BEDS</div>
+                <h5 class="fs-5 fw-semibold text-dark">
+                  <svg
+                    width="22"
+                    height="15"
+                    viewBox="0 0 44 30"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <path
+                      d="M12,15C13.187,15 14.347,14.648 15.333,13.989C16.32,13.33 17.089,12.393 17.543,11.296C17.997,10.2 18.116,8.994 17.885,7.83C17.653,6.666 17.082,5.597 16.243,4.758C15.404,3.918 14.334,3.347 13.171,3.116C12.007,2.884 10.8,3.003 9.704,3.457C8.608,3.911 7.67,4.68 7.011,5.667C6.352,6.654 6,7.814 6,9C6,10.592 6.632,12.118 7.757,13.243C8.883,14.368 10.409,15 12,15L12,15ZM12,7C12.396,7 12.782,7.118 13.111,7.337C13.44,7.557 13.696,7.869 13.848,8.235C13.999,8.6 14.039,9.002 13.962,9.39C13.884,9.778 13.694,10.135 13.414,10.414C13.135,10.694 12.778,10.885 12.39,10.962C12.002,11.039 11.6,10.999 11.235,10.848C10.869,10.697 10.557,10.44 10.337,10.111C10.117,9.782 10,9.396 10,9C10,8.47 10.211,7.961 10.586,7.586C10.961,7.211 11.47,7 12,7ZM38,3L22,3C21.47,3 20.961,3.211 20.586,3.586C20.211,3.961 20,4.47 20,5L20,17L4,17L4,1C4,0.47 3.789,-0.039 3.414,-0.414C3.039,-0.789 2.53,-1 2,-1C1.47,-1 0.961,-0.789 0.586,-0.414C0.211,-0.039 0,0.47 0,1L0,27C0,27.531 0.211,28.039 0.586,28.414C0.961,28.789 1.47,29 2,29C2.53,29 3.039,28.789 3.414,28.414C3.789,28.039 4,27.531 4,27L4,21L40,21L40,27C40,27.531 40.211,28.039 40.586,28.414C40.961,28.789 41.47,29 42,29C42.53,29 43.039,28.789 43.414,28.414C43.789,28.039 44,27.531 44,27L44,9C44,7.409 43.368,5.883 42.243,4.758C41.117,3.632 39.591,3 38,3ZM40,17L24,17L24,7L38,7C38.53,7 39.039,7.211 39.414,7.586C39.789,7.961 40,8.47 40,9L40,17Z"
+                      fill="#2F344B"
+                    />
+                  </svg>
+
+                  3
+                </h5>
+              </div>
+
+              <div>
+                <div class="fs-6 fw-semibold text-gray-600">BATHS</div>
+                <h5 class="fs-5 fw-semibold text-dark">
+                  <svg
+                    width="19"
+                    height="20"
+                    viewBox="0 0 44 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <path
+                      d="M42,20L8,20L8,8.821C7.993,8.1 8.183,7.392 8.55,6.772C8.916,6.152 9.446,5.644 10.08,5.303C10.782,4.923 11.581,4.762 12.375,4.841C11.971,6.065 11.914,7.377 12.209,8.632C12.505,9.886 13.142,11.035 14.051,11.949L16.172,14.071C16.358,14.256 16.578,14.404 16.821,14.504C17.063,14.605 17.323,14.656 17.586,14.656C17.849,14.656 18.109,14.605 18.351,14.504C18.594,14.404 18.814,14.256 19,14.071L26.07,7C26.256,6.815 26.403,6.594 26.504,6.351C26.605,6.109 26.656,5.849 26.656,5.586C26.656,5.324 26.605,5.063 26.504,4.821C26.403,4.578 26.256,4.358 26.07,4.172L23.949,2.051C22.769,0.876 21.207,0.161 19.546,0.035C17.885,-0.09 16.234,0.382 14.89,1.366C13.678,0.893 12.369,0.723 11.077,0.871C9.784,1.019 8.548,1.48 7.474,2.215C6.401,2.95 5.523,3.935 4.918,5.087C4.312,6.238 3.997,7.52 4,8.821L4,20L2,20C1.47,20 0.961,20.211 0.586,20.586C0.211,20.961 0,21.47 0,22C0,22.531 0.211,23.039 0.586,23.414C0.961,23.79 1.47,24 2,24L4,24L4,30C4.004,31.237 4.39,32.442 5.107,33.451C5.823,34.459 6.833,35.221 8,35.632L8,38C8,38.531 8.211,39.039 8.586,39.414C8.961,39.79 9.47,40 10,40C10.53,40 11.039,39.79 11.414,39.414C11.789,39.039 12,38.531 12,38L12,36L32,36L32,38C32,38.531 32.211,39.039 32.586,39.414C32.961,39.79 33.47,40 34,40C34.53,40 35.039,39.79 35.414,39.414C35.789,39.039 36,38.531 36,38L36,35.632C37.167,35.221 38.177,34.459 38.893,33.451C39.61,32.442 39.996,31.237 40,30L40,24L42,24C42.53,24 43.039,23.79 43.414,23.414C43.789,23.039 44,22.531 44,22C44,21.47 43.789,20.961 43.414,20.586C43.039,20.211 42.53,20 42,20ZM16.879,4.879C17.442,4.318 18.205,4.002 19,4.002C19.795,4.002 20.558,4.318 21.121,4.879L21.828,5.586L17.586,9.828L16.879,9.121C16.317,8.558 16.002,7.796 16.001,7C16.001,6.205 16.317,5.442 16.879,4.879L16.879,4.879ZM36,30C36,30.531 35.789,31.039 35.414,31.414C35.039,31.789 34.53,32 34,32L10,32C9.47,32 8.961,31.789 8.586,31.414C8.211,31.039 8,30.531 8,30L8,24L36,24L36,30Z"
+                      fill="#000000"
+                    />
+                  </svg>
+
+                  3
+                </h5>
+              </div>
+              <div>
+                <div class="fs-6 fw-semibold text-gray-600">SIZE (SQFT)</div>
+                <h5 class="fs-5 fw-semibold text-dark">
+                  <svg
+                    width="20"
+                    height="8"
+                    viewBox="0 0 40 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <path
+                      d="M39.84,7.24C39.745,6.995 39.602,6.77 39.42,6.58L34.42,1.58C34.043,1.204 33.533,0.992 33,0.992C32.467,0.992 31.957,1.204 31.58,1.58C31.203,1.957 30.992,2.468 30.992,3C30.992,3.533 31.203,4.044 31.58,4.42L33.18,6L24,6C23.47,6 22.961,6.211 22.586,6.586C22.211,6.961 22,7.47 22,8C22,8.531 22.211,9.039 22.586,9.414C22.961,9.789 23.47,10 24,10L33.18,10L31.58,11.58C31.393,11.766 31.244,11.987 31.142,12.231C31.041,12.475 30.988,12.736 30.988,13C30.988,13.264 31.041,13.526 31.142,13.769C31.244,14.013 31.393,14.234 31.58,14.42C31.766,14.608 31.987,14.756 32.231,14.858C32.475,14.959 32.736,15.012 33,15.012C33.264,15.012 33.525,14.959 33.769,14.858C34.013,14.756 34.234,14.608 34.42,14.42L39.42,9.42C39.602,9.23 39.745,9.006 39.84,8.76C40.04,8.273 40.04,7.727 39.84,7.24ZM16,6L6.82,6L8.42,4.42C8.797,4.044 9.008,3.533 9.008,3C9.008,2.468 8.797,1.957 8.42,1.58C8.043,1.204 7.533,0.992 7,0.992C6.467,0.992 5.957,1.204 5.58,1.58L0.58,6.58C0.398,6.77 0.255,6.995 0.16,7.24C-0.04,7.727 -0.04,8.273 0.16,8.76C0.255,9.006 0.398,9.23 0.58,9.42L5.58,14.42C5.766,14.608 5.987,14.756 6.231,14.858C6.475,14.959 6.736,15.012 7,15.012C7.264,15.012 7.525,14.959 7.769,14.858C8.013,14.756 8.234,14.608 8.42,14.42C8.607,14.234 8.756,14.013 8.858,13.769C8.959,13.526 9.012,13.264 9.012,13C9.012,12.736 8.959,12.475 8.858,12.231C8.756,11.987 8.607,11.766 8.42,11.58L6.82,10L16,10C16.53,10 17.039,9.789 17.414,9.414C17.789,9.039 18,8.531 18,8C18,7.47 17.789,6.961 17.414,6.586C17.039,6.211 16.53,6 16,6Z"
+                      fill="#000000"
+                    />
+                  </svg>
+
+                  1,150
+                </h5>
+              </div>
+            </div>
+            <h1 class="mt-3">Key Features</h1>
+            <span class="badge badge-secondary badge-lg">Bright kitchen</span>
+            <span class="badge badge-secondary badge-lg">Terraced House</span>
+            <span class="badge badge-secondary badge-lg"
+              >Off Street Parking</span
+            >
+            <span class="badge badge-secondary badge-lg"
+              >Close To Tulse Hill Station</span
+            >
+            <h1 class="mt-5">Description</h1>
+            <p>
+              A charming three bedroom terraced property in a private
+              development. The property has been well maintained by current
+              owners and benefits from a south facing garden.
+            </p>
+            <a
+              class="btn btn-link btn-color-success btn-active-color-primary fs-4"
+              style="color: #007d05"
+            >
+              Read full description
+            </a>
+            <h1 class="mt-5">Property Details</h1>
+            <!--begin::Accordion-->
+            <div class="accordion" id="kt_accordion_1">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="kt_accordion_1_header_1">
+                  <button
+                    class="accordion-button fs-4 fw-semibold collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#kt_accordion_1_body_1"
+                    aria-expanded="true"
+                    aria-controls="kt_accordion_1_body_1"
+                  >
+                    Interior
+                  </button>
+                </h2>
+                <div
+                  id="kt_accordion_1_body_1"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="kt_accordion_1_header_1"
+                >
+                  <div class="accordion-body">
+                    <div>
+                      <div class="fs-5 fw-bold text-gray-500">Beds:</div>
+                      <div class="fs-5 fw-medium text-dark">3 Beds</div>
+                    </div>
+                    <div class="my-3">
+                      <div class="fs-5 fw-bold text-gray-500">
+                        Full bathrooms:
+                      </div>
+                      <div class="fs-5 fw-medium text-dark">1 Bath</div>
+                    </div>
+                    <div class="my-3">
+                      <div class="fs-5 fw-bold text-gray-500">
+                        Cooling features:
+                      </div>
+                      <div class="fs-5 fw-medium text-dark">None</div>
+                    </div>
+                    <div class="my-3">
+                      <div class="fs-5 fw-bold text-gray-500">
+                        Laundry features:
+                      </div>
+                      <div class="fs-5 fw-medium text-dark">3 Beds</div>
+                    </div>
+                    <div class="my-3">
+                      <div class="fs-5 fw-bold text-gray-500">
+                        Heating features:
+                      </div>
+                      <div class="fs-5 fw-medium text-dark">
+                        Fireplace(s), Baseboard
+                      </div>
+                    </div>
+                    <div class="mt-3">
+                      <div class="fs-5 fw-bold text-gray-500">Flooring:</div>
+                      <div class="fs-5 fw-medium text-dark">
+                        Flooring: Stone, Travertine, Carpet, Wall to Wall Carpet
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="kt_accordion_1_header_2">
+                  <button
+                    class="accordion-button fs-4 fw-semibold collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#kt_accordion_1_body_2"
+                    aria-expanded="true"
+                    aria-controls="kt_accordion_1_body_2"
+                  >
+                    Property
+                  </button>
+                </h2>
+                <div
+                  id="kt_accordion_1_body_2"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="kt_accordion_1_header_2"
+                >
+                  <div class="accordion-body">
+                    <div>
+                      <div class="fs-5 fw-bold text-gray-500">Year Built:</div>
+                      <div class="fs-5 fw-medium text-dark">1986</div>
+                    </div>
+                    <div class="my-3">
+                      <div class="fs-5 fw-bold text-gray-500">Type:</div>
+                      <div class="fs-5 fw-medium text-dark">Single Family</div>
+                    </div>
+                    <div class="my-3">
+                      <div class="fs-5 fw-bold text-gray-500">Levels:</div>
+                      <div class="fs-5 fw-medium text-dark">2</div>
+                    </div>
+                    <div class="my-3">
+                      <div class="fs-5 fw-bold text-gray-500">Stories:</div>
+                      <div class="fs-5 fw-medium text-dark">2</div>
+                    </div>
+                    <div class="my-3">
+                      <div class="fs-5 fw-bold text-gray-500">
+                        Parking spaces:
+                      </div>
+                      <div class="fs-5 fw-medium text-dark">2</div>
+                    </div>
+                    <div class="mt-3">
+                      <div class="fs-5 fw-bold text-gray-500">
+                        Lot features:
+                      </div>
+                      <div class="fs-5 fw-medium text-dark">Paved</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="kt_accordion_1_header_3">
+                  <button
+                    class="accordion-button fs-4 fw-semibold collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#kt_accordion_1_body_3"
+                    aria-expanded="true"
+                    aria-controls="kt_accordion_1_body_3"
+                  >
+                    Construction
+                  </button>
+                </h2>
+                <div
+                  id="kt_accordion_1_body_3"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="kt_accordion_1_header_3"
+                >
+                  <div class="accordion-body">
+                    <div>
+                      <div class="fs-5 fw-bold text-gray-500">Home type:</div>
+                      <div class="fs-5 fw-medium text-dark">Condo</div>
+                    </div>
+                    <div class="my-3">
+                      <div class="fs-5 fw-bold text-gray-500">
+                        Architectural style:
+                      </div>
+                      <div class="fs-5 fw-medium text-dark">Contemporary</div>
+                    </div>
+                    <div class="my-3">
+                      <div class="fs-5 fw-bold text-gray-500">
+                        Construction materials:
+                      </div>
+                      <div class="fs-5 fw-medium text-dark">
+                        Cement/Concrete, Metal/Vinyl
+                      </div>
+                    </div>
+                    <div class="my-3">
+                      <div class="fs-5 fw-bold text-gray-500">Roof:</div>
+                      <div class="fs-5 fw-medium text-dark">Composition</div>
+                    </div>
+                    <div class="mt-3">
+                      <div class="fs-5 fw-bold text-gray-500">
+                        Major remodel year:
+                      </div>
+                      <div class="fs-5 fw-medium text-dark">2001</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="kt_accordion_1_header_4">
+                  <button
+                    class="accordion-button fs-4 fw-semibold collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#kt_accordion_1_body_4"
+                    aria-expanded="true"
+                    aria-controls="kt_accordion_1_body_4"
+                  >
+                    Utilities & green energy
+                  </button>
+                </h2>
+                <div
+                  id="kt_accordion_1_body_4"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="kt_accordion_1_header_4"
+                >
+                  <div class="accordion-body">
+                    <div>
+                      <div class="fs-5 fw-bold text-gray-500">
+                        Electric information:
+                      </div>
+                      <div class="fs-5 fw-medium text-dark">
+                        Seattle City Light
+                      </div>
+                    </div>
+                    <div class="my-3">
+                      <div class="fs-5 fw-bold text-gray-500">
+                        Sewer information:
+                      </div>
+                      <div class="fs-5 fw-medium text-dark">
+                        Sewer Connected, Company: Seattle Public Utilities
+                      </div>
+                    </div>
+                    <div class="my-3">
+                      <div class="fs-5 fw-bold text-gray-500">
+                        Water information:
+                      </div>
+                      <div class="fs-5 fw-medium text-dark">
+                        Public, Company: Seattle Public Utilities
+                      </div>
+                    </div>
+                    <div class="mt-3">
+                      <div class="fs-5 fw-bold text-gray-500">
+                        Utilities for property:
+                      </div>
+                      <div class="fs-5 fw-medium text-dark">
+                        Century Link / Tmobile
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="kt_accordion_1_header_5">
+                  <button
+                    class="accordion-button fs-4 fw-semibold collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#kt_accordion_1_body_5"
+                    aria-expanded="true"
+                    aria-controls="kt_accordion_1_body_5"
+                  >
+                    Property Fees
+                  </button>
+                </h2>
+                <div
+                  id="kt_accordion_1_body_5"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="kt_accordion_1_header_5"
+                >
+                  <div class="accordion-body">
+                    <div>
+                      <div class="fs-5 fw-bold text-gray-500">
+                        Buyer's Premium::
+                      </div>
+                      <div class="fs-5 fw-medium text-dark">
+                        Greater of 5.0% of bid amount, or $1,000 (Buyer Pays at
+                        Closing).
+                      </div>
+                    </div>
+                    <div class="my-3">
+                      <div class="fs-5 fw-bold text-gray-500">
+                        Buyer's Agent Commission:
+                      </div>
+                      <div class="fs-5 fw-medium text-dark">
+                        Greater of 2.5% of sale price or $1,000. (Seller Pays at
+                        Closing)
+                      </div>
+                    </div>
+                    <div class="my-3">
+                      <div class="fs-5 fw-bold text-gray-500">
+                        Water information:
+                      </div>
+                      <div class="fs-5 fw-medium text-dark">
+                        Public, Company: Seattle Public Utilities
+                      </div>
+                    </div>
+                    <div class="mt-3">
+                      <div class="fs-5 fw-medium text-dark">
+                        All bids must be submitted through Hubzu.com. Bids sent
+                        via email and fax will not be considered.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--end::Accordion-->
+            <h1 class="mt-5">Proximity</h1>
+            <!--begin::Accordion-->
+            <div class="accordion" id="kt_accordion_2">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="kt_accordion_2_header_1">
+                  <button
+                    class="accordion-button fs-4 fw-semibold collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#kt_accordion_2_body_1"
+                    aria-expanded="false"
+                    aria-controls="kt_accordion_2_body_1"
+                  >
+                    Public schools
+                  </button>
+                </h2>
+                <div
+                  id="kt_accordion_2_body_1"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="kt_accordion_2_header_1"
+                >
+                  <div class="accordion-body">
+                    <div>
+                      <div class="fs-5 fw-medium text-dark">
+                        &bull; West Springfield High School
+                      </div>
+                      <div class="fs-5 fw-bold text-gray-500">3,2 km</div>
+                    </div>
+                    <div class="my-3">
+                      <div class="fs-5 fw-medium text-dark">
+                        &bull; West Springfield High School
+                      </div>
+                      <div class="fs-5 fw-bold text-gray-500">3,2 km</div>
+                    </div>
+                    <div class="mt-3">
+                      <div class="fs-5 fw-medium text-dark">
+                        &bull; West Springfield High School
+                      </div>
+                      <div class="fs-5 fw-bold text-gray-500">3,2 km</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="kt_accordion_2_header_2">
+                  <button
+                    class="accordion-button fs-4 fw-semibold collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#kt_accordion_2_body_2"
+                    aria-expanded="false"
+                    aria-controls="kt_accordion_2_body_2"
+                  >
+                    Parks
+                  </button>
+                </h2>
+                <div
+                  id="kt_accordion_2_body_2"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="kt_accordion_2_header_2"
+                >
+                  <div class="accordion-body">...</div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="kt_accordion_2_header_3">
+                  <button
+                    class="accordion-button fs-4 fw-semibold collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#kt_accordion_2_body_3"
+                    aria-expanded="false"
+                    aria-controls="kt_accordion_2_body_3"
+                  >
+                    Stores
+                  </button>
+                </h2>
+                <div
+                  id="kt_accordion_2_body_3"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="kt_accordion_2_header_3"
+                >
+                  <div class="accordion-body">...</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="kt_accordion_2_header_4">
+                  <button
+                    class="accordion-button fs-4 fw-semibold collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#kt_accordion_2_body_4"
+                    aria-expanded="false"
+                    aria-controls="kt_accordion_2_body_4"
+                  >
+                    Gymes
+                  </button>
+                </h2>
+                <div
+                  id="kt_accordion_2_body_4"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="kt_accordion_2_header_4"
+                >
+                  <div class="accordion-body">...</div>
+                </div>
+              </div>
+            </div>
+            <!--end::Accordion-->
+            <div class="mt-5">
+              <img
+                src="/assets/media/image/maps.png"
+                alt="Maps"
+                class="img-fluid"
+              />
+            </div>
+            <h1 class="mt-5">Listed By</h1>
+            <div>
+              <div>
+                <div class="fs-5 fw-bold text-gray-500">Agent</div>
+                <div class="fs-5 fw-medium text-dark">Lisa Lindsey</div>
+              </div>
+              <div class="my-3">
+                <div class="fs-5 fw-bold text-gray-500">License Number:</div>
+                <div class="fs-5 fw-medium text-dark">0225053511</div>
+              </div>
+              <div class="my-3">
+                <div class="fs-5 fw-bold text-gray-500">Corporation:</div>
+                <div class="fs-5 fw-medium text-dark">Realty Resource, LLC</div>
+              </div>
+              <div class="my-3">
+                <div class="fs-5 fw-bold text-gray-500">Phone Number:</div>
+                <div class="fs-5 fw-medium text-dark">(434) 572-2645</div>
+              </div>
+            </div>
+            <h1 class="mt-5">Documents</h1>
+            <div class="">
+              <a
+                class="btn btn-link btn-color-success btn-active-color-primary fs-4"
+                style="color: #007d05"
               >
+                <i class="las la-file fs-1"></i>Purchase & Sale Agreement
+              </a>
+            </div>
+            <div class="my-3">
+              <a
+                class="btn btn-link btn-color-success btn-active-color-primary fs-4"
+                style="color: #007d05"
+              >
+                <i class="las la-file fs-1"></i>ALL US Protect Family From Lead
+              </a>
+            </div>
+            <div class="mt-3">
+              <a
+                class="btn btn-link btn-color-success btn-active-color-primary fs-4"
+                style="color: #007d05"
+              >
+                <i class="las la-file fs-1"></i>Brokerage Commissions Document
+              </a>
+            </div>
+            <h1 class="mt-5">FAQ</h1>
+            <!--begin::Accordion-->
+            <div class="accordion" id="kt_accordion_3">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="kt_accordion_3_header_1">
+                  <button
+                    class="accordion-button fs-4 fw-semibold collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#kt_accordion_3_body_1"
+                    aria-expanded="true"
+                    aria-controls="kt_accordion_3_body_1"
+                  >
+                    I am having trouble submitting a bid or offer online. What
+                    should I do?
+                  </button>
+                </h2>
+                <div
+                  id="kt_accordion_3_body_1"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="kt_accordion_3_header_1"
+                  data-bs-parent="#kt_accordion_3"
+                >
+                  <div class="accordion-body">
+                    <p class="fs-5 fw-normal text-dark">
+                      Please contact our Customer Care team via email at
+                      CustomerCare@hubzu.com or call us at 855-882-1314.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="kt_accordion_3_header_2">
+                  <button
+                    class="accordion-button fs-4 fw-semibold collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#kt_accordion_3_body_2"
+                    aria-expanded="false"
+                    aria-controls="kt_accordion_3_body_2"
+                  >
+                    I am having trouble submitting a bid or offer online. What
+                    should I do?
+                  </button>
+                </h2>
+                <div
+                  id="kt_accordion_3_body_2"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="kt_accordion_3_header_2"
+                  data-bs-parent="#kt_accordion_3"
+                >
+                  <div class="accordion-body">
+                    <p class="fs-5 fw-normal text-dark">
+                      Please contact our Customer Care team via email at
+                      CustomerCare@hubzu.com or call us at 855-882-1314.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="kt_accordion_3_header_3">
+                  <button
+                    class="accordion-button fs-4 fw-semibold collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#kt_accordion_3_body_3"
+                    aria-expanded="false"
+                    aria-controls="kt_accordion_3_body_3"
+                  >
+                    I am having trouble submitting a bid or offer online. What
+                    should I do?
+                  </button>
+                </h2>
+                <div
+                  id="kt_accordion_3_body_3"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="kt_accordion_3_header_3"
+                  data-bs-parent="#kt_accordion_3"
+                >
+                  <div class="accordion-body">
+                    <p class="fs-5 fw-normal text-dark">
+                      Please contact our Customer Care team via email at
+                      CustomerCare@hubzu.com or call us at 855-882-1314.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="kt_accordion_3_header_4">
+                  <button
+                    class="accordion-button fs-4 fw-semibold collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#kt_accordion_3_body_4"
+                    aria-expanded="false"
+                    aria-controls="kt_accordion_3_body_4"
+                  >
+                    I am having trouble submitting a bid or offer online. What
+                    should I do?
+                  </button>
+                </h2>
+                <div
+                  id="kt_accordion_3_body_4"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="kt_accordion_3_header_4"
+                  data-bs-parent="#kt_accordion_3"
+                >
+                  <div class="accordion-body">
+                    <p class="fs-5 fw-normal text-dark">
+                      Please contact our Customer Care team via email at
+                      CustomerCare@hubzu.com or call us at 855-882-1314.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="kt_accordion_3_header_5">
+                  <button
+                    class="accordion-button fs-4 fw-semibold collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#kt_accordion_3_body_5"
+                    aria-expanded="false"
+                    aria-controls="kt_accordion_3_body_5"
+                  >
+                    I am having trouble submitting a bid or offer online. What
+                    should I do?
+                  </button>
+                </h2>
+                <div
+                  id="kt_accordion_3_body_5"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="kt_accordion_3_header_5"
+                  data-bs-parent="#kt_accordion_3"
+                >
+                  <div class="accordion-body">
+                    <p class="fs-5 fw-normal text-dark">
+                      Please contact our Customer Care team via email at
+                      CustomerCare@hubzu.com or call us at 855-882-1314.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--end::Accordion-->
+            <h1 class="mt-5">Similar homes</h1>
+          </div>
+          <div class="responsive">
+            <div class="card" style="width: 28rem">
+              <div
+                class="card-img-top position-relative"
+                style="height: 200px; width: auto; object-fit: cover"
+              >
+                <img
+                  src="/assets/media/image/houseImage.jpeg"
+                  class="card-img-top"
+                  alt="..."
+                  style="height: 100%; width: 100%; object-fit: cover"
+                />
+                <i
+                  class="fa-regular fa-heart fs-1 text-white position-absolute top-0 end-0 m-2"
+                ></i>
+              </div>
+              <div class="card-body">
+                <div class="fs-5 fw-bold text-gray-500">
+                  Current Highest Bid:
+                </div>
+                <div class="fs-5 fw-semibold text-dark">€63,000</div>
+                <div class="d-flex gap-8 text-center my-3">
+                  <div>
+                    <h5 class="fs-5 fw-semibold text-dark">
+                      <svg
+                        width="22"
+                        height="15"
+                        viewBox="0 0 44 30"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <path
+                          d="M12,15C13.187,15 14.347,14.648 15.333,13.989C16.32,13.33 17.089,12.393 17.543,11.296C17.997,10.2 18.116,8.994 17.885,7.83C17.653,6.666 17.082,5.597 16.243,4.758C15.404,3.918 14.334,3.347 13.171,3.116C12.007,2.884 10.8,3.003 9.704,3.457C8.608,3.911 7.67,4.68 7.011,5.667C6.352,6.654 6,7.814 6,9C6,10.592 6.632,12.118 7.757,13.243C8.883,14.368 10.409,15 12,15L12,15ZM12,7C12.396,7 12.782,7.118 13.111,7.337C13.44,7.557 13.696,7.869 13.848,8.235C13.999,8.6 14.039,9.002 13.962,9.39C13.884,9.778 13.694,10.135 13.414,10.414C13.135,10.694 12.778,10.885 12.39,10.962C12.002,11.039 11.6,10.999 11.235,10.848C10.869,10.697 10.557,10.44 10.337,10.111C10.117,9.782 10,9.396 10,9C10,8.47 10.211,7.961 10.586,7.586C10.961,7.211 11.47,7 12,7ZM38,3L22,3C21.47,3 20.961,3.211 20.586,3.586C20.211,3.961 20,4.47 20,5L20,17L4,17L4,1C4,0.47 3.789,-0.039 3.414,-0.414C3.039,-0.789 2.53,-1 2,-1C1.47,-1 0.961,-0.789 0.586,-0.414C0.211,-0.039 0,0.47 0,1L0,27C0,27.531 0.211,28.039 0.586,28.414C0.961,28.789 1.47,29 2,29C2.53,29 3.039,28.789 3.414,28.414C3.789,28.039 4,27.531 4,27L4,21L40,21L40,27C40,27.531 40.211,28.039 40.586,28.414C40.961,28.789 41.47,29 42,29C42.53,29 43.039,28.789 43.414,28.414C43.789,28.039 44,27.531 44,27L44,9C44,7.409 43.368,5.883 42.243,4.758C41.117,3.632 39.591,3 38,3ZM40,17L24,17L24,7L38,7C38.53,7 39.039,7.211 39.414,7.586C39.789,7.961 40,8.47 40,9L40,17Z"
+                          fill="#2F344B"
+                        />
+                      </svg>
+
+                      3
+                    </h5>
+                  </div>
+
+                  <div>
+                    <h5 class="fs-5 fw-semibold text-dark">
+                      <svg
+                        width="19"
+                        height="20"
+                        viewBox="0 0 44 40"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <path
+                          d="M42,20L8,20L8,8.821C7.993,8.1 8.183,7.392 8.55,6.772C8.916,6.152 9.446,5.644 10.08,5.303C10.782,4.923 11.581,4.762 12.375,4.841C11.971,6.065 11.914,7.377 12.209,8.632C12.505,9.886 13.142,11.035 14.051,11.949L16.172,14.071C16.358,14.256 16.578,14.404 16.821,14.504C17.063,14.605 17.323,14.656 17.586,14.656C17.849,14.656 18.109,14.605 18.351,14.504C18.594,14.404 18.814,14.256 19,14.071L26.07,7C26.256,6.815 26.403,6.594 26.504,6.351C26.605,6.109 26.656,5.849 26.656,5.586C26.656,5.324 26.605,5.063 26.504,4.821C26.403,4.578 26.256,4.358 26.07,4.172L23.949,2.051C22.769,0.876 21.207,0.161 19.546,0.035C17.885,-0.09 16.234,0.382 14.89,1.366C13.678,0.893 12.369,0.723 11.077,0.871C9.784,1.019 8.548,1.48 7.474,2.215C6.401,2.95 5.523,3.935 4.918,5.087C4.312,6.238 3.997,7.52 4,8.821L4,20L2,20C1.47,20 0.961,20.211 0.586,20.586C0.211,20.961 0,21.47 0,22C0,22.531 0.211,23.039 0.586,23.414C0.961,23.79 1.47,24 2,24L4,24L4,30C4.004,31.237 4.39,32.442 5.107,33.451C5.823,34.459 6.833,35.221 8,35.632L8,38C8,38.531 8.211,39.039 8.586,39.414C8.961,39.79 9.47,40 10,40C10.53,40 11.039,39.79 11.414,39.414C11.789,39.039 12,38.531 12,38L12,36L32,36L32,38C32,38.531 32.211,39.039 32.586,39.414C32.961,39.79 33.47,40 34,40C34.53,40 35.039,39.79 35.414,39.414C35.789,39.039 36,38.531 36,38L36,35.632C37.167,35.221 38.177,34.459 38.893,33.451C39.61,32.442 39.996,31.237 40,30L40,24L42,24C42.53,24 43.039,23.79 43.414,23.414C43.789,23.039 44,22.531 44,22C44,21.47 43.789,20.961 43.414,20.586C43.039,20.211 42.53,20 42,20ZM16.879,4.879C17.442,4.318 18.205,4.002 19,4.002C19.795,4.002 20.558,4.318 21.121,4.879L21.828,5.586L17.586,9.828L16.879,9.121C16.317,8.558 16.002,7.796 16.001,7C16.001,6.205 16.317,5.442 16.879,4.879L16.879,4.879ZM36,30C36,30.531 35.789,31.039 35.414,31.414C35.039,31.789 34.53,32 34,32L10,32C9.47,32 8.961,31.789 8.586,31.414C8.211,31.039 8,30.531 8,30L8,24L36,24L36,30Z"
+                          fill="#000000"
+                        />
+                      </svg>
+
+                      3
+                    </h5>
+                  </div>
+                  <div>
+                    <h5 class="fs-5 fw-semibold text-dark">
+                      <svg
+                        width="20"
+                        height="8"
+                        viewBox="0 0 40 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <path
+                          d="M39.84,7.24C39.745,6.995 39.602,6.77 39.42,6.58L34.42,1.58C34.043,1.204 33.533,0.992 33,0.992C32.467,0.992 31.957,1.204 31.58,1.58C31.203,1.957 30.992,2.468 30.992,3C30.992,3.533 31.203,4.044 31.58,4.42L33.18,6L24,6C23.47,6 22.961,6.211 22.586,6.586C22.211,6.961 22,7.47 22,8C22,8.531 22.211,9.039 22.586,9.414C22.961,9.789 23.47,10 24,10L33.18,10L31.58,11.58C31.393,11.766 31.244,11.987 31.142,12.231C31.041,12.475 30.988,12.736 30.988,13C30.988,13.264 31.041,13.526 31.142,13.769C31.244,14.013 31.393,14.234 31.58,14.42C31.766,14.608 31.987,14.756 32.231,14.858C32.475,14.959 32.736,15.012 33,15.012C33.264,15.012 33.525,14.959 33.769,14.858C34.013,14.756 34.234,14.608 34.42,14.42L39.42,9.42C39.602,9.23 39.745,9.006 39.84,8.76C40.04,8.273 40.04,7.727 39.84,7.24ZM16,6L6.82,6L8.42,4.42C8.797,4.044 9.008,3.533 9.008,3C9.008,2.468 8.797,1.957 8.42,1.58C8.043,1.204 7.533,0.992 7,0.992C6.467,0.992 5.957,1.204 5.58,1.58L0.58,6.58C0.398,6.77 0.255,6.995 0.16,7.24C-0.04,7.727 -0.04,8.273 0.16,8.76C0.255,9.006 0.398,9.23 0.58,9.42L5.58,14.42C5.766,14.608 5.987,14.756 6.231,14.858C6.475,14.959 6.736,15.012 7,15.012C7.264,15.012 7.525,14.959 7.769,14.858C8.013,14.756 8.234,14.608 8.42,14.42C8.607,14.234 8.756,14.013 8.858,13.769C8.959,13.526 9.012,13.264 9.012,13C9.012,12.736 8.959,12.475 8.858,12.231C8.756,11.987 8.607,11.766 8.42,11.58L6.82,10L16,10C16.53,10 17.039,9.789 17.414,9.414C17.789,9.039 18,8.531 18,8C18,7.47 17.789,6.961 17.414,6.586C17.039,6.211 16.53,6 16,6Z"
+                          fill="#000000"
+                        />
+                      </svg>
+
+                      1,150
+                    </h5>
+                  </div>
+                </div>
+                <div class="fs-5 fw-semibold text-gray-800">
+                  Cork Cork T12XPN, Ireland
+                </div>
+              </div>
+            </div>
+            <div class="card" style="width: 28rem">
+              <div
+                class="card-img-top position-relative"
+                style="height: 200px; width: auto; object-fit: cover"
+              >
+                <img
+                  src="/assets/media/image/houseImage1.jpeg"
+                  class="card-img-top"
+                  alt="..."
+                  style="height: 100%; width: 100%; object-fit: cover"
+                />
+                <i
+                  class="fa-regular fa-heart fs-1 text-white position-absolute top-0 end-0 m-2"
+                ></i>
+              </div>
+              <div class="card-body">
+                <div class="fs-5 fw-bold text-gray-500">
+                  Current Highest Bid:
+                </div>
+                <div class="fs-5 fw-semibold text-dark">€63,000</div>
+                <div class="d-flex gap-8 text-center my-3">
+                  <div>
+                    <h5 class="fs-5 fw-semibold text-dark">
+                      <svg
+                        width="22"
+                        height="15"
+                        viewBox="0 0 44 30"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <path
+                          d="M12,15C13.187,15 14.347,14.648 15.333,13.989C16.32,13.33 17.089,12.393 17.543,11.296C17.997,10.2 18.116,8.994 17.885,7.83C17.653,6.666 17.082,5.597 16.243,4.758C15.404,3.918 14.334,3.347 13.171,3.116C12.007,2.884 10.8,3.003 9.704,3.457C8.608,3.911 7.67,4.68 7.011,5.667C6.352,6.654 6,7.814 6,9C6,10.592 6.632,12.118 7.757,13.243C8.883,14.368 10.409,15 12,15L12,15ZM12,7C12.396,7 12.782,7.118 13.111,7.337C13.44,7.557 13.696,7.869 13.848,8.235C13.999,8.6 14.039,9.002 13.962,9.39C13.884,9.778 13.694,10.135 13.414,10.414C13.135,10.694 12.778,10.885 12.39,10.962C12.002,11.039 11.6,10.999 11.235,10.848C10.869,10.697 10.557,10.44 10.337,10.111C10.117,9.782 10,9.396 10,9C10,8.47 10.211,7.961 10.586,7.586C10.961,7.211 11.47,7 12,7ZM38,3L22,3C21.47,3 20.961,3.211 20.586,3.586C20.211,3.961 20,4.47 20,5L20,17L4,17L4,1C4,0.47 3.789,-0.039 3.414,-0.414C3.039,-0.789 2.53,-1 2,-1C1.47,-1 0.961,-0.789 0.586,-0.414C0.211,-0.039 0,0.47 0,1L0,27C0,27.531 0.211,28.039 0.586,28.414C0.961,28.789 1.47,29 2,29C2.53,29 3.039,28.789 3.414,28.414C3.789,28.039 4,27.531 4,27L4,21L40,21L40,27C40,27.531 40.211,28.039 40.586,28.414C40.961,28.789 41.47,29 42,29C42.53,29 43.039,28.789 43.414,28.414C43.789,28.039 44,27.531 44,27L44,9C44,7.409 43.368,5.883 42.243,4.758C41.117,3.632 39.591,3 38,3ZM40,17L24,17L24,7L38,7C38.53,7 39.039,7.211 39.414,7.586C39.789,7.961 40,8.47 40,9L40,17Z"
+                          fill="#2F344B"
+                        />
+                      </svg>
+
+                      3
+                    </h5>
+                  </div>
+
+                  <div>
+                    <h5 class="fs-5 fw-semibold text-dark">
+                      <svg
+                        width="19"
+                        height="20"
+                        viewBox="0 0 44 40"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <path
+                          d="M42,20L8,20L8,8.821C7.993,8.1 8.183,7.392 8.55,6.772C8.916,6.152 9.446,5.644 10.08,5.303C10.782,4.923 11.581,4.762 12.375,4.841C11.971,6.065 11.914,7.377 12.209,8.632C12.505,9.886 13.142,11.035 14.051,11.949L16.172,14.071C16.358,14.256 16.578,14.404 16.821,14.504C17.063,14.605 17.323,14.656 17.586,14.656C17.849,14.656 18.109,14.605 18.351,14.504C18.594,14.404 18.814,14.256 19,14.071L26.07,7C26.256,6.815 26.403,6.594 26.504,6.351C26.605,6.109 26.656,5.849 26.656,5.586C26.656,5.324 26.605,5.063 26.504,4.821C26.403,4.578 26.256,4.358 26.07,4.172L23.949,2.051C22.769,0.876 21.207,0.161 19.546,0.035C17.885,-0.09 16.234,0.382 14.89,1.366C13.678,0.893 12.369,0.723 11.077,0.871C9.784,1.019 8.548,1.48 7.474,2.215C6.401,2.95 5.523,3.935 4.918,5.087C4.312,6.238 3.997,7.52 4,8.821L4,20L2,20C1.47,20 0.961,20.211 0.586,20.586C0.211,20.961 0,21.47 0,22C0,22.531 0.211,23.039 0.586,23.414C0.961,23.79 1.47,24 2,24L4,24L4,30C4.004,31.237 4.39,32.442 5.107,33.451C5.823,34.459 6.833,35.221 8,35.632L8,38C8,38.531 8.211,39.039 8.586,39.414C8.961,39.79 9.47,40 10,40C10.53,40 11.039,39.79 11.414,39.414C11.789,39.039 12,38.531 12,38L12,36L32,36L32,38C32,38.531 32.211,39.039 32.586,39.414C32.961,39.79 33.47,40 34,40C34.53,40 35.039,39.79 35.414,39.414C35.789,39.039 36,38.531 36,38L36,35.632C37.167,35.221 38.177,34.459 38.893,33.451C39.61,32.442 39.996,31.237 40,30L40,24L42,24C42.53,24 43.039,23.79 43.414,23.414C43.789,23.039 44,22.531 44,22C44,21.47 43.789,20.961 43.414,20.586C43.039,20.211 42.53,20 42,20ZM16.879,4.879C17.442,4.318 18.205,4.002 19,4.002C19.795,4.002 20.558,4.318 21.121,4.879L21.828,5.586L17.586,9.828L16.879,9.121C16.317,8.558 16.002,7.796 16.001,7C16.001,6.205 16.317,5.442 16.879,4.879L16.879,4.879ZM36,30C36,30.531 35.789,31.039 35.414,31.414C35.039,31.789 34.53,32 34,32L10,32C9.47,32 8.961,31.789 8.586,31.414C8.211,31.039 8,30.531 8,30L8,24L36,24L36,30Z"
+                          fill="#000000"
+                        />
+                      </svg>
+
+                      3
+                    </h5>
+                  </div>
+                  <div>
+                    <h5 class="fs-5 fw-semibold text-dark">
+                      <svg
+                        width="20"
+                        height="8"
+                        viewBox="0 0 40 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <path
+                          d="M39.84,7.24C39.745,6.995 39.602,6.77 39.42,6.58L34.42,1.58C34.043,1.204 33.533,0.992 33,0.992C32.467,0.992 31.957,1.204 31.58,1.58C31.203,1.957 30.992,2.468 30.992,3C30.992,3.533 31.203,4.044 31.58,4.42L33.18,6L24,6C23.47,6 22.961,6.211 22.586,6.586C22.211,6.961 22,7.47 22,8C22,8.531 22.211,9.039 22.586,9.414C22.961,9.789 23.47,10 24,10L33.18,10L31.58,11.58C31.393,11.766 31.244,11.987 31.142,12.231C31.041,12.475 30.988,12.736 30.988,13C30.988,13.264 31.041,13.526 31.142,13.769C31.244,14.013 31.393,14.234 31.58,14.42C31.766,14.608 31.987,14.756 32.231,14.858C32.475,14.959 32.736,15.012 33,15.012C33.264,15.012 33.525,14.959 33.769,14.858C34.013,14.756 34.234,14.608 34.42,14.42L39.42,9.42C39.602,9.23 39.745,9.006 39.84,8.76C40.04,8.273 40.04,7.727 39.84,7.24ZM16,6L6.82,6L8.42,4.42C8.797,4.044 9.008,3.533 9.008,3C9.008,2.468 8.797,1.957 8.42,1.58C8.043,1.204 7.533,0.992 7,0.992C6.467,0.992 5.957,1.204 5.58,1.58L0.58,6.58C0.398,6.77 0.255,6.995 0.16,7.24C-0.04,7.727 -0.04,8.273 0.16,8.76C0.255,9.006 0.398,9.23 0.58,9.42L5.58,14.42C5.766,14.608 5.987,14.756 6.231,14.858C6.475,14.959 6.736,15.012 7,15.012C7.264,15.012 7.525,14.959 7.769,14.858C8.013,14.756 8.234,14.608 8.42,14.42C8.607,14.234 8.756,14.013 8.858,13.769C8.959,13.526 9.012,13.264 9.012,13C9.012,12.736 8.959,12.475 8.858,12.231C8.756,11.987 8.607,11.766 8.42,11.58L6.82,10L16,10C16.53,10 17.039,9.789 17.414,9.414C17.789,9.039 18,8.531 18,8C18,7.47 17.789,6.961 17.414,6.586C17.039,6.211 16.53,6 16,6Z"
+                          fill="#000000"
+                        />
+                      </svg>
+
+                      1,150
+                    </h5>
+                  </div>
+                </div>
+                <div class="fs-5 fw-semibold text-gray-800">
+                  Cork Cork T12XPN, Ireland
+                </div>
+              </div>
+            </div>
+            <div class="card" style="width: 28rem">
+              <div
+                class="card-img-top position-relative"
+                style="height: 200px; width: auto; object-fit: cover"
+              >
+                <img
+                  src="/assets/media/image/houseImage1.jpeg"
+                  class="card-img-top"
+                  alt="..."
+                  style="height: 100%; width: 100%; object-fit: cover"
+                />
+                <i
+                  class="fa-regular fa-heart fs-1 text-white position-absolute top-0 end-0 m-2"
+                ></i>
+              </div>
+              <div class="card-body">
+                <div class="fs-5 fw-bold text-gray-500">
+                  Current Highest Bid:
+                </div>
+                <div class="fs-5 fw-semibold text-dark">€63,000</div>
+                <div class="d-flex gap-8 text-center my-3">
+                  <div>
+                    <h5 class="fs-5 fw-semibold text-dark">
+                      <svg
+                        width="22"
+                        height="15"
+                        viewBox="0 0 44 30"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <path
+                          d="M12,15C13.187,15 14.347,14.648 15.333,13.989C16.32,13.33 17.089,12.393 17.543,11.296C17.997,10.2 18.116,8.994 17.885,7.83C17.653,6.666 17.082,5.597 16.243,4.758C15.404,3.918 14.334,3.347 13.171,3.116C12.007,2.884 10.8,3.003 9.704,3.457C8.608,3.911 7.67,4.68 7.011,5.667C6.352,6.654 6,7.814 6,9C6,10.592 6.632,12.118 7.757,13.243C8.883,14.368 10.409,15 12,15L12,15ZM12,7C12.396,7 12.782,7.118 13.111,7.337C13.44,7.557 13.696,7.869 13.848,8.235C13.999,8.6 14.039,9.002 13.962,9.39C13.884,9.778 13.694,10.135 13.414,10.414C13.135,10.694 12.778,10.885 12.39,10.962C12.002,11.039 11.6,10.999 11.235,10.848C10.869,10.697 10.557,10.44 10.337,10.111C10.117,9.782 10,9.396 10,9C10,8.47 10.211,7.961 10.586,7.586C10.961,7.211 11.47,7 12,7ZM38,3L22,3C21.47,3 20.961,3.211 20.586,3.586C20.211,3.961 20,4.47 20,5L20,17L4,17L4,1C4,0.47 3.789,-0.039 3.414,-0.414C3.039,-0.789 2.53,-1 2,-1C1.47,-1 0.961,-0.789 0.586,-0.414C0.211,-0.039 0,0.47 0,1L0,27C0,27.531 0.211,28.039 0.586,28.414C0.961,28.789 1.47,29 2,29C2.53,29 3.039,28.789 3.414,28.414C3.789,28.039 4,27.531 4,27L4,21L40,21L40,27C40,27.531 40.211,28.039 40.586,28.414C40.961,28.789 41.47,29 42,29C42.53,29 43.039,28.789 43.414,28.414C43.789,28.039 44,27.531 44,27L44,9C44,7.409 43.368,5.883 42.243,4.758C41.117,3.632 39.591,3 38,3ZM40,17L24,17L24,7L38,7C38.53,7 39.039,7.211 39.414,7.586C39.789,7.961 40,8.47 40,9L40,17Z"
+                          fill="#2F344B"
+                        />
+                      </svg>
+
+                      3
+                    </h5>
+                  </div>
+
+                  <div>
+                    <h5 class="fs-5 fw-semibold text-dark">
+                      <svg
+                        width="19"
+                        height="20"
+                        viewBox="0 0 44 40"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <path
+                          d="M42,20L8,20L8,8.821C7.993,8.1 8.183,7.392 8.55,6.772C8.916,6.152 9.446,5.644 10.08,5.303C10.782,4.923 11.581,4.762 12.375,4.841C11.971,6.065 11.914,7.377 12.209,8.632C12.505,9.886 13.142,11.035 14.051,11.949L16.172,14.071C16.358,14.256 16.578,14.404 16.821,14.504C17.063,14.605 17.323,14.656 17.586,14.656C17.849,14.656 18.109,14.605 18.351,14.504C18.594,14.404 18.814,14.256 19,14.071L26.07,7C26.256,6.815 26.403,6.594 26.504,6.351C26.605,6.109 26.656,5.849 26.656,5.586C26.656,5.324 26.605,5.063 26.504,4.821C26.403,4.578 26.256,4.358 26.07,4.172L23.949,2.051C22.769,0.876 21.207,0.161 19.546,0.035C17.885,-0.09 16.234,0.382 14.89,1.366C13.678,0.893 12.369,0.723 11.077,0.871C9.784,1.019 8.548,1.48 7.474,2.215C6.401,2.95 5.523,3.935 4.918,5.087C4.312,6.238 3.997,7.52 4,8.821L4,20L2,20C1.47,20 0.961,20.211 0.586,20.586C0.211,20.961 0,21.47 0,22C0,22.531 0.211,23.039 0.586,23.414C0.961,23.79 1.47,24 2,24L4,24L4,30C4.004,31.237 4.39,32.442 5.107,33.451C5.823,34.459 6.833,35.221 8,35.632L8,38C8,38.531 8.211,39.039 8.586,39.414C8.961,39.79 9.47,40 10,40C10.53,40 11.039,39.79 11.414,39.414C11.789,39.039 12,38.531 12,38L12,36L32,36L32,38C32,38.531 32.211,39.039 32.586,39.414C32.961,39.79 33.47,40 34,40C34.53,40 35.039,39.79 35.414,39.414C35.789,39.039 36,38.531 36,38L36,35.632C37.167,35.221 38.177,34.459 38.893,33.451C39.61,32.442 39.996,31.237 40,30L40,24L42,24C42.53,24 43.039,23.79 43.414,23.414C43.789,23.039 44,22.531 44,22C44,21.47 43.789,20.961 43.414,20.586C43.039,20.211 42.53,20 42,20ZM16.879,4.879C17.442,4.318 18.205,4.002 19,4.002C19.795,4.002 20.558,4.318 21.121,4.879L21.828,5.586L17.586,9.828L16.879,9.121C16.317,8.558 16.002,7.796 16.001,7C16.001,6.205 16.317,5.442 16.879,4.879L16.879,4.879ZM36,30C36,30.531 35.789,31.039 35.414,31.414C35.039,31.789 34.53,32 34,32L10,32C9.47,32 8.961,31.789 8.586,31.414C8.211,31.039 8,30.531 8,30L8,24L36,24L36,30Z"
+                          fill="#000000"
+                        />
+                      </svg>
+
+                      3
+                    </h5>
+                  </div>
+                  <div>
+                    <h5 class="fs-5 fw-semibold text-dark">
+                      <svg
+                        width="20"
+                        height="8"
+                        viewBox="0 0 40 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <path
+                          d="M39.84,7.24C39.745,6.995 39.602,6.77 39.42,6.58L34.42,1.58C34.043,1.204 33.533,0.992 33,0.992C32.467,0.992 31.957,1.204 31.58,1.58C31.203,1.957 30.992,2.468 30.992,3C30.992,3.533 31.203,4.044 31.58,4.42L33.18,6L24,6C23.47,6 22.961,6.211 22.586,6.586C22.211,6.961 22,7.47 22,8C22,8.531 22.211,9.039 22.586,9.414C22.961,9.789 23.47,10 24,10L33.18,10L31.58,11.58C31.393,11.766 31.244,11.987 31.142,12.231C31.041,12.475 30.988,12.736 30.988,13C30.988,13.264 31.041,13.526 31.142,13.769C31.244,14.013 31.393,14.234 31.58,14.42C31.766,14.608 31.987,14.756 32.231,14.858C32.475,14.959 32.736,15.012 33,15.012C33.264,15.012 33.525,14.959 33.769,14.858C34.013,14.756 34.234,14.608 34.42,14.42L39.42,9.42C39.602,9.23 39.745,9.006 39.84,8.76C40.04,8.273 40.04,7.727 39.84,7.24ZM16,6L6.82,6L8.42,4.42C8.797,4.044 9.008,3.533 9.008,3C9.008,2.468 8.797,1.957 8.42,1.58C8.043,1.204 7.533,0.992 7,0.992C6.467,0.992 5.957,1.204 5.58,1.58L0.58,6.58C0.398,6.77 0.255,6.995 0.16,7.24C-0.04,7.727 -0.04,8.273 0.16,8.76C0.255,9.006 0.398,9.23 0.58,9.42L5.58,14.42C5.766,14.608 5.987,14.756 6.231,14.858C6.475,14.959 6.736,15.012 7,15.012C7.264,15.012 7.525,14.959 7.769,14.858C8.013,14.756 8.234,14.608 8.42,14.42C8.607,14.234 8.756,14.013 8.858,13.769C8.959,13.526 9.012,13.264 9.012,13C9.012,12.736 8.959,12.475 8.858,12.231C8.756,11.987 8.607,11.766 8.42,11.58L6.82,10L16,10C16.53,10 17.039,9.789 17.414,9.414C17.789,9.039 18,8.531 18,8C18,7.47 17.789,6.961 17.414,6.586C17.039,6.211 16.53,6 16,6Z"
+                          fill="#000000"
+                        />
+                      </svg>
+
+                      1,150
+                    </h5>
+                  </div>
+                </div>
+                <div class="fs-5 fw-semibold text-gray-800">
+                  Cork Cork T12XPN, Ireland
+                </div>
+              </div>
+            </div>
+            <div class="card" style="width: 28rem">
+              <div
+                class="card-img-top position-relative"
+                style="height: 200px; width: auto; object-fit: cover"
+              >
+                <img
+                  src="/assets/media/image/houseImage1.jpeg"
+                  class="card-img-top"
+                  alt="..."
+                  style="height: 100%; width: 100%; object-fit: cover"
+                />
+                <i
+                  class="fa-regular fa-heart fs-1 text-white position-absolute top-0 end-0 m-2"
+                ></i>
+              </div>
+              <div class="card-body">
+                <div class="fs-5 fw-bold text-gray-500">
+                  Current Highest Bid:
+                </div>
+                <div class="fs-5 fw-semibold text-dark">€63,000</div>
+                <div class="d-flex gap-8 text-center my-3">
+                  <div>
+                    <h5 class="fs-5 fw-semibold text-dark">
+                      <svg
+                        width="22"
+                        height="15"
+                        viewBox="0 0 44 30"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <path
+                          d="M12,15C13.187,15 14.347,14.648 15.333,13.989C16.32,13.33 17.089,12.393 17.543,11.296C17.997,10.2 18.116,8.994 17.885,7.83C17.653,6.666 17.082,5.597 16.243,4.758C15.404,3.918 14.334,3.347 13.171,3.116C12.007,2.884 10.8,3.003 9.704,3.457C8.608,3.911 7.67,4.68 7.011,5.667C6.352,6.654 6,7.814 6,9C6,10.592 6.632,12.118 7.757,13.243C8.883,14.368 10.409,15 12,15L12,15ZM12,7C12.396,7 12.782,7.118 13.111,7.337C13.44,7.557 13.696,7.869 13.848,8.235C13.999,8.6 14.039,9.002 13.962,9.39C13.884,9.778 13.694,10.135 13.414,10.414C13.135,10.694 12.778,10.885 12.39,10.962C12.002,11.039 11.6,10.999 11.235,10.848C10.869,10.697 10.557,10.44 10.337,10.111C10.117,9.782 10,9.396 10,9C10,8.47 10.211,7.961 10.586,7.586C10.961,7.211 11.47,7 12,7ZM38,3L22,3C21.47,3 20.961,3.211 20.586,3.586C20.211,3.961 20,4.47 20,5L20,17L4,17L4,1C4,0.47 3.789,-0.039 3.414,-0.414C3.039,-0.789 2.53,-1 2,-1C1.47,-1 0.961,-0.789 0.586,-0.414C0.211,-0.039 0,0.47 0,1L0,27C0,27.531 0.211,28.039 0.586,28.414C0.961,28.789 1.47,29 2,29C2.53,29 3.039,28.789 3.414,28.414C3.789,28.039 4,27.531 4,27L4,21L40,21L40,27C40,27.531 40.211,28.039 40.586,28.414C40.961,28.789 41.47,29 42,29C42.53,29 43.039,28.789 43.414,28.414C43.789,28.039 44,27.531 44,27L44,9C44,7.409 43.368,5.883 42.243,4.758C41.117,3.632 39.591,3 38,3ZM40,17L24,17L24,7L38,7C38.53,7 39.039,7.211 39.414,7.586C39.789,7.961 40,8.47 40,9L40,17Z"
+                          fill="#2F344B"
+                        />
+                      </svg>
+
+                      3
+                    </h5>
+                  </div>
+
+                  <div>
+                    <h5 class="fs-5 fw-semibold text-dark">
+                      <svg
+                        width="19"
+                        height="20"
+                        viewBox="0 0 44 40"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <path
+                          d="M42,20L8,20L8,8.821C7.993,8.1 8.183,7.392 8.55,6.772C8.916,6.152 9.446,5.644 10.08,5.303C10.782,4.923 11.581,4.762 12.375,4.841C11.971,6.065 11.914,7.377 12.209,8.632C12.505,9.886 13.142,11.035 14.051,11.949L16.172,14.071C16.358,14.256 16.578,14.404 16.821,14.504C17.063,14.605 17.323,14.656 17.586,14.656C17.849,14.656 18.109,14.605 18.351,14.504C18.594,14.404 18.814,14.256 19,14.071L26.07,7C26.256,6.815 26.403,6.594 26.504,6.351C26.605,6.109 26.656,5.849 26.656,5.586C26.656,5.324 26.605,5.063 26.504,4.821C26.403,4.578 26.256,4.358 26.07,4.172L23.949,2.051C22.769,0.876 21.207,0.161 19.546,0.035C17.885,-0.09 16.234,0.382 14.89,1.366C13.678,0.893 12.369,0.723 11.077,0.871C9.784,1.019 8.548,1.48 7.474,2.215C6.401,2.95 5.523,3.935 4.918,5.087C4.312,6.238 3.997,7.52 4,8.821L4,20L2,20C1.47,20 0.961,20.211 0.586,20.586C0.211,20.961 0,21.47 0,22C0,22.531 0.211,23.039 0.586,23.414C0.961,23.79 1.47,24 2,24L4,24L4,30C4.004,31.237 4.39,32.442 5.107,33.451C5.823,34.459 6.833,35.221 8,35.632L8,38C8,38.531 8.211,39.039 8.586,39.414C8.961,39.79 9.47,40 10,40C10.53,40 11.039,39.79 11.414,39.414C11.789,39.039 12,38.531 12,38L12,36L32,36L32,38C32,38.531 32.211,39.039 32.586,39.414C32.961,39.79 33.47,40 34,40C34.53,40 35.039,39.79 35.414,39.414C35.789,39.039 36,38.531 36,38L36,35.632C37.167,35.221 38.177,34.459 38.893,33.451C39.61,32.442 39.996,31.237 40,30L40,24L42,24C42.53,24 43.039,23.79 43.414,23.414C43.789,23.039 44,22.531 44,22C44,21.47 43.789,20.961 43.414,20.586C43.039,20.211 42.53,20 42,20ZM16.879,4.879C17.442,4.318 18.205,4.002 19,4.002C19.795,4.002 20.558,4.318 21.121,4.879L21.828,5.586L17.586,9.828L16.879,9.121C16.317,8.558 16.002,7.796 16.001,7C16.001,6.205 16.317,5.442 16.879,4.879L16.879,4.879ZM36,30C36,30.531 35.789,31.039 35.414,31.414C35.039,31.789 34.53,32 34,32L10,32C9.47,32 8.961,31.789 8.586,31.414C8.211,31.039 8,30.531 8,30L8,24L36,24L36,30Z"
+                          fill="#000000"
+                        />
+                      </svg>
+
+                      3
+                    </h5>
+                  </div>
+                  <div>
+                    <h5 class="fs-5 fw-semibold text-dark">
+                      <svg
+                        width="20"
+                        height="8"
+                        viewBox="0 0 40 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <path
+                          d="M39.84,7.24C39.745,6.995 39.602,6.77 39.42,6.58L34.42,1.58C34.043,1.204 33.533,0.992 33,0.992C32.467,0.992 31.957,1.204 31.58,1.58C31.203,1.957 30.992,2.468 30.992,3C30.992,3.533 31.203,4.044 31.58,4.42L33.18,6L24,6C23.47,6 22.961,6.211 22.586,6.586C22.211,6.961 22,7.47 22,8C22,8.531 22.211,9.039 22.586,9.414C22.961,9.789 23.47,10 24,10L33.18,10L31.58,11.58C31.393,11.766 31.244,11.987 31.142,12.231C31.041,12.475 30.988,12.736 30.988,13C30.988,13.264 31.041,13.526 31.142,13.769C31.244,14.013 31.393,14.234 31.58,14.42C31.766,14.608 31.987,14.756 32.231,14.858C32.475,14.959 32.736,15.012 33,15.012C33.264,15.012 33.525,14.959 33.769,14.858C34.013,14.756 34.234,14.608 34.42,14.42L39.42,9.42C39.602,9.23 39.745,9.006 39.84,8.76C40.04,8.273 40.04,7.727 39.84,7.24ZM16,6L6.82,6L8.42,4.42C8.797,4.044 9.008,3.533 9.008,3C9.008,2.468 8.797,1.957 8.42,1.58C8.043,1.204 7.533,0.992 7,0.992C6.467,0.992 5.957,1.204 5.58,1.58L0.58,6.58C0.398,6.77 0.255,6.995 0.16,7.24C-0.04,7.727 -0.04,8.273 0.16,8.76C0.255,9.006 0.398,9.23 0.58,9.42L5.58,14.42C5.766,14.608 5.987,14.756 6.231,14.858C6.475,14.959 6.736,15.012 7,15.012C7.264,15.012 7.525,14.959 7.769,14.858C8.013,14.756 8.234,14.608 8.42,14.42C8.607,14.234 8.756,14.013 8.858,13.769C8.959,13.526 9.012,13.264 9.012,13C9.012,12.736 8.959,12.475 8.858,12.231C8.756,11.987 8.607,11.766 8.42,11.58L6.82,10L16,10C16.53,10 17.039,9.789 17.414,9.414C17.789,9.039 18,8.531 18,8C18,7.47 17.789,6.961 17.414,6.586C17.039,6.211 16.53,6 16,6Z"
+                          fill="#000000"
+                        />
+                      </svg>
+
+                      1,150
+                    </h5>
+                  </div>
+                </div>
+                <div class="fs-5 fw-semibold text-gray-800">
+                  Cork Cork T12XPN, Ireland
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -167,11 +1399,50 @@
     <!--begin::Javascript-->
     <script>
       var hostUrl = "assets/";
+
+      $("document").ready(function () {
+        $(".responsive").slick({
+          dots: false,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          arrows: false,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: false,
+              },
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+              },
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              },
+            },
+          ],
+        });
+      });
     </script>
     <!--begin::Global Javascript Bundle(mandatory for all pages)-->
     <script src="assets/plugins/global/plugins.bundle.js"></script>
     <script src="assets/js/scripts.bundle.js"></script>
-
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
     <!--end::Javascript-->
   </body>
   <!--end::Body-->

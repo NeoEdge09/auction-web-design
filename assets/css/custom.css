@@ -23,3 +23,25 @@
 .custom-link {
   color: #1efa72;
 }
+
+.vertical-images {
+  display: flex;
+  flex-direction: column;
+}
+.side-section {
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+.slick-slide {
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .button-container {
+    bottom: 5px;
+    left: 5px;
+  }
+  .responsive-text {
+    font-size: 1rem;
+  }
+}
